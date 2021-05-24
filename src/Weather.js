@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import "./Weather.css";
 import SearchEngine from "./SearchEngine";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   function handelResponse(response) {
+    console.log(response.data);
     setWeatherData({
+      date: new Date(response.data.dt * 1000),
       ready: true,
       temperture: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      date: "Mon May 17, 14:59, 2021",
       city: response.data.name,
       description: response.data.weather[0].description,
       iconUrl:
@@ -24,7 +27,9 @@ export default function Weather(props) {
         <SearchEngine />
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date} </li>
+          <li>
+            <FormattedDate date={weatherData.date} />
+          </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row">
