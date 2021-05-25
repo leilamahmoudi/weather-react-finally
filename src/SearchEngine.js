@@ -22,17 +22,9 @@ export default function SearchEngine({ setCity, getData }) {
             />
           </div>
           <div className="col-3">
-            <input
-              type="submit"
-              value="Search"
-              className="btn btn-outLine-secondary"
-            />
+            <input type="submit" value="Search" className="btn btn-primary" />
           </div>
-          <div className="col-2">
-            <button className="btn btn-primary" type="button">
-              My Location
-            </button>
-          </div>
+          <div className="col-2"></div>
         </div>
       </form>
     </div>
