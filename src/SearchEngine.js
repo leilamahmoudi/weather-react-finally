@@ -10,23 +10,22 @@ export default function SearchEngine({ setCity, getData }) {
   }
   return (
     <div className="SearchEngine">
-      <form onSubmit={handelSubmit}>
-        <div className="row">
-          <div className="col-7">
-            <input
-              type="Search"
-              placeholder="Type a city"
-              className="form-control"
-              autoFocus="on"
-              onChange={handelCityChange}
-            />
+      <div className="input-group">
+        <form onSubmit={handelSubmit}>
+          <input
+            type="Search"
+            placeholder="Type a city"
+            className="form-control"
+            autoFocus="on"
+            onChange={handelCityChange}
+          />
+          <div className="input-group-btn">
+            <button type="submit" value="Search" className="btn btn-default">
+              Search
+            </button>
           </div>
-          <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary" />
-          </div>
-          <div className="col-2"></div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
