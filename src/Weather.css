@@ -8,20 +8,22 @@
   padding: 25px;
   margin: 30px;
   border-radius: 4px;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 canvas {
   align-items: center;
   padding: 5px;
   width: 100px;
-  margin: 50px 40px 10px 170px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .Weather .current-degree {
   font-family: "Fraunces", serif;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  padding-left: 17px;
+
   margin-top: 0px;
   font-size: 65px;
 }
@@ -59,7 +61,6 @@ body {
   font-size: 55px;
   font-family: "Fraunces", serif;
   font-weight: 0;
-  padding-left: 18px;
 }
 .description {
   padding-left: 18px;
@@ -73,9 +74,10 @@ body {
   width: 100%;
 }
 .input-group .btn {
-  background-color: rgb(204, 233, 233);
+  background-color: #ebf1f8;
   float: right;
   display: inline;
+  border: 1px solid #ced4da;
 }
 .form-control {
   width: 80%;
