@@ -3,6 +3,7 @@ import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import SearchEngine from "./SearchEngine";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -11,6 +12,7 @@ export default function Weather(props) {
   function handelResponse(response) {
     console.log(response.data);
     setWeatherData({
+      coord: response.data.coord,
       date: new Date(response.data.dt * 1000),
       ready: true,
       temperture: response.data.main.temp,
@@ -33,6 +35,7 @@ export default function Weather(props) {
       <div className="Weather">
         <SearchEngine setCity={setCity} getData={getData} />
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coord={weatherData.coord} />
       </div>
     );
   } else {
