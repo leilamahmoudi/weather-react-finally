@@ -8,8 +8,24 @@
   padding: 25px;
   margin: 30px;
   border-radius: 4px;
-  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  position: relative;
+  white-space: nowrap;
 }
+
+.Weather::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.WeatherTemperture {
+  margin-bottom: 30px;
+}
+
 canvas {
   align-items: center;
   padding: 5px;
@@ -86,4 +102,64 @@ body {
   position: relative;
   margin-right: 0px;
   float: left;
+}
+
+.PARTLY_CLOUDY_NIGHT::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/partly-cloudy.jpeg");
+}
+
+.CLEAR_DAY::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/clear-sky.jpeg");
+}
+
+.CLOUDY::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/cloudy.jpeg");
+}
+
+.RAIN::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/rain.jpeg");
+}
+
+.CLEAR_NIGHT::after {
+  content: "";
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/clear-night.jpeg");
 }
