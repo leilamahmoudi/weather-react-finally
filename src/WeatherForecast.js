@@ -12,7 +12,7 @@ export default function WeatherForecast(props) {
     let lat = props.coord.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handelResponse);
-  }, []);
+  });
 
   function handelResponse(response) {
     setForecast(response.data.daily);
