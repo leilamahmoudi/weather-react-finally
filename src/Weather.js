@@ -11,7 +11,7 @@ export default function Weather(props) {
 
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   function handelResponse(response) {
     console.log(response.data);

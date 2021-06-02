@@ -9,7 +9,8 @@
   margin: 30px;
   border-radius: 4px;
   position: relative;
-  white-space: nowrap;
+  text-shadow: 2px 2px 2px white;
+  font-weight: bold;
 }
 
 .Weather::after {
@@ -154,7 +155,7 @@ body {
 
 .CLEAR_NIGHT::after {
   content: "";
-  opacity: 0.9;
+  opacity: 0.6;
   top: 0;
   left: 0;
   bottom: 0;
@@ -162,4 +163,48 @@ body {
   position: absolute;
   z-index: -1;
   background: url("../src/images/clear-night.jpeg");
+}
+.PARTLY_CLOUDY_DAY::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/partly-cloudy2.jpeg");
+}
+.RAIN1::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/rain1.jpeg");
+}
+.FOG::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/fog.jpeg");
+}
+.SNOW::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background: url("../src/images/snow.jpeg");
 }
